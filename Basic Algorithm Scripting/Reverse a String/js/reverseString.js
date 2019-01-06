@@ -16,10 +16,16 @@
 //	}
 //}
 
+//function reverseString(str) {
+//	return str.length === 0 ? "" : 
+//		str.length === 1 ? str : 
+//		str[str.length - 1] += reverseString(str.substring(0, str.length - 1))
+//}
+
 function reverseString(str) {
-	return str.length === 0 ? "" : 
+	return !str.length ? "" : 
 		str.length === 1 ? str : 
 		str[str.length - 1] += reverseString(str.substring(0, str.length - 1))
 }
 
-console.log(reverseString("hello"));
+console.log(reverseString("Greetings from Earth"));
