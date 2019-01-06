@@ -17,15 +17,25 @@
 //}
 
 //function reverseString(str) {
-//	return str.length === 0 ? "" : 
-//		str.length === 1 ? str : 
+//	return str.length === 0 ? "" :
+//		str.length === 1 ? str :
 //		str[str.length - 1] += reverseString(str.substring(0, str.length - 1))
 //}
 
 function reverseString(str) {
-	return !str.length ? "" : 
-		str.length === 1 ? str : 
-		str[str.length - 1] += reverseString(str.substring(0, str.length - 1))
+  return !str.length
+    ? ""
+    : str.length === 1
+    ? str
+    : (str[str.length - 1] += reverseString(str.substring(0, str.length - 1)));
+}
+
+// fCC solution:
+function reverseString(str) {
+  return str
+    .split("")
+    .reverse()
+    .join("");
 }
 
 console.log(reverseString("Greetings from Earth"));
